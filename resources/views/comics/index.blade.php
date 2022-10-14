@@ -3,13 +3,7 @@
 @section('metaTitle', 'Comics')
 
 @section('content')
-    <h1>
-        Comics
-    </h1>
-
-    <div>
-        @forelse($comics as $comic)
-            <h3>
+    {{-- <h3>
                 {{ $comic['title'] }}
             </h3>
             <h4>
@@ -32,9 +26,18 @@
                 <a href="{{ route('comics.show', $comic->id) }}">
                     Scopri
                 </a>
-            </div>
-        @empty
-            Nessun Comic trovato
-        @endforelse
+            </div> --}}
+    @include('partials.jumbo')
+    <div class="series_wrapper container">
+        <div class="btn info_btn uppercase">
+            Current series
+        </div>
+        @include('partials.cards')
+        <div class="btn viewer_btn uppercase">
+            Load more
+        </div>
+        <a href="{{ route('comics.create') }}" class="btn viewer_btn uppercase">
+            Aggiungi comic
+        </a>
     </div>
 @endsection
