@@ -32,12 +32,12 @@
         <div class="btn info_btn uppercase">
             Current series
         </div>
+        <a href="{{ route('comics.create') }}" class="btn viewer_btn uppercase">
+            Aggiungi comic
+        </a>
         @include('partials.cards')
         <div class="btn viewer_btn uppercase">
             Load more
         </div>
-        <a href="{{ route('comics.create') }}" class="btn viewer_btn uppercase">
-            Aggiungi comic
-        </a>
     </div>
 @endsection

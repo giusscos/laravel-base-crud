@@ -259,6 +259,9 @@ main .series_wrapper .btn.viewer_btn {
   padding: 0.5rem 2rem;
   background-color: #0282F9;
 }
+main .series_wrapper .btn.viewer_btn:first-of-type {
+  align-self: flex-end;
+}
 main .comic_wrapper {
   font-weight: normal;
   color: #1f1f1f;

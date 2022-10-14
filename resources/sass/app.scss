@@ -41,6 +41,10 @@ main {
                 font-weight: bold;
                 padding: 0.5rem 2rem;
                 background-color: $dc-accent;
+
+                &:first-of-type{
+                    align-self: flex-end;
+                }
             }
         }
     }
