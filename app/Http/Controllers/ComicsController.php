@@ -40,8 +40,8 @@ class ComicsController extends Controller
 
         $data = $request->all();
 
-        $c = new Comic();
-        $c->fill($data);
+        // $c = new Comic();
+        // $c->fill($data);
         // $c->title = $data['title'];
         // $c->description = $data['description'];
         // $c->thumb = $data['thumb'];
@@ -49,7 +49,8 @@ class ComicsController extends Controller
         // $c->series = $data['series'];
         // $c->sale_date = $data['sale_date'];
         // $c->type = $data['type'];
-        $c->save();
+        // $c->save();
+        $c = Comic::create($data);
 
         return redirect()->route('comics.show', $c->id);
     }
