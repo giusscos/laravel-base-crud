@@ -3,10 +3,10 @@
 @section('metaTitle', 'Aggiungi Comic')
 
 @section('content')
-    <h1>
+<div class="form_wrapper">
+    <h4 class="form-title">
         Aggiungi Comic
-    </h1>
-
+    </h4>
     <form action="{{ route('comics.store') }}" method="POST">
         @csrf
         <p>
@@ -37,9 +37,9 @@
             <label for="type">Tipo</label>
             <input type="text" name="type" id="type">
         </p>
-        <button type="submit">
+        <button class="btn" type="submit">
             Aggiungi
         </button>
     </form>
-
+</div>
 @endsection

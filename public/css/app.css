@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+ul,
+menu {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  border: 0px solid;
+  color: currentColor;
+  background-color: transparent;
+}
+
+input {
+  color: currentColor;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.container {
+  padding: 0 0.75rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.btn {
+  padding: 0.75rem 0.5rem;
+  border: 2px solid transparent;
+}
+
+header .banner_header {
+  gap: 1.5rem;
+  display: flex;
+  padding: 0.25rem;
+  font-weight: bold;
+  color: #f1f1f1;
+  background-color: #0282F9;
+}
+header .banner_header span {
+  margin-left: auto;
+}
+header .banner_header select {
+  font-weight: bold;
+}
+header .container {
+  display: flex;
+  padding: 0.5rem 0.75rem 0;
+}
+header .container .logo_wrapper {
+  margin-right: auto;
+  position: relative;
+}
+header .container .logo_wrapper a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+header .container .logo_wrapper img {
+  height: 120px;
+  padding: 1rem 0;
+}
+
+.nav_list {
+  gap: 1.5rem;
+  height: 100%;
+  display: flex;
+}
+.nav_list .list_item {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.nav_list .list_item.active .item_link {
+  color: #2195f3;
+}
+.nav_list .list_item.active .item_link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 0.25rem;
+  transform: translateX(-50%);
+  background-color: #2195f3;
+}
+.nav_list .list_item .item_link {
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.nav_list .list_item .item_link:hover {
+  color: #2195f3;
+}
+
+footer {
+  position: relative;
+}
+footer .banner.join {
+  padding: 3rem 0;
+  color: #f1f1f1;
+  background-color: #2f2f2f;
+}
+footer .banner.join .container {
+  display: flex;
+  align-items: center;
+}
+footer .banner.join .container .btn.sign-up_cta {
+  border: 2px solid #2195f3;
+}
+footer .banner.join .container h3 {
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 1rem;
+  color: #2195f3;
+}
+footer .banner.blue {
+  background-color: #2195f3;
+}
+footer .banner.blue .container .footer_list-merch {
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+}
+footer .banner.blue .container .footer_list-merch .list_item {
+  flex-grow: 1;
+}
+footer .banner.blue .container .footer_list-merch .list_item .item_link {
+  gap: 1rem;
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: bold;
+  align-items: center;
+  color: #f1f1f1;
+}
+footer .banner.menu {
+  color: #f1f1f1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/footer-bg.jpg");
+}
+footer .banner.menu .container {
+  display: flex;
+  flex-wrap: wrap;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-image: url("../img/dc-logo-bg.png");
+}
+footer .banner.menu .container .footer_menu {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0 0;
+}
+footer .banner.menu .container .footer_menu .menu_item {
+  flex-grow: 1;
+}
+footer .banner.menu .container .footer_menu .menu_item h3 {
+  font-weight: bold;
+  padding-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+footer .banner.menu .container .footer_menu .menu_item .item_list-wrapper {
+  padding-bottom: 1.5rem;
+}
+footer .banner.menu .container .footer_menu .menu_item .item_list-wrapper .list_item {
+  padding: 0.1rem 0;
+}
+footer .banner.menu .container .footer_menu .menu_item .item_list-wrapper .list_item .item_link {
+  opacity: 0.7;
+  font-size: 0.85rem;
+  padding: 0.1rem 0;
+}
+footer .banner.menu .container .footer_menu .menu_item .item_list-wrapper .list_item .item_link:hover {
+  opacity: 1;
+}
+footer .banner.menu .container .info_footer-menu {
+  flex-basis: 100%;
+  color: #ccc;
+  font-size: 0.8rem;
+  padding: 0 0 2rem;
+}
+footer .banner.menu .container .info_footer-menu .info_link {
+  color: #2195f3;
+  text-decoration: underline;
+}
+
+.social_list {
+  display: flex;
+  gap: 1rem;
+}
+.social_list .list_item .item_link {
+  opacity: 0.8;
+}
+.social_list .list_item .item_link:hover {
+  opacity: 1;
+}
+
+main {
+  font-weight: bold;
+  color: #f1f1f1;
+  background-color: #1f1f1f;
+}
+main .jumbo {
+  height: 400px;
+  background-image: url("../img/jumbotron.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+main .series_wrapper {
+  padding: 1rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main .series_wrapper .btn.info_btn {
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: #0282F9;
+}
+main .series_wrapper .btn.viewer_btn {
+  opacity: 1;
+  cursor: pointer;
+  align-self: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  background-color: #0282F9;
+}
+main .series_wrapper .btn.viewer_btn:first-of-type {
+  align-self: flex-end;
+}
+main .comic_wrapper {
+  font-weight: normal;
+  color: #1f1f1f;
+  background: #0282F9;
+  background: linear-gradient(180deg, #0282F9 80px, #fff 80px);
+}
+main .comic_wrapper .comic-thumb {
+  height: 80px;
+}
+main .comic_wrapper .comic-thumb img {
+  max-width: 200px;
+  transform: translateY(-80%);
+  border: 1px solid #f1f1f1;
+}
+main .comic_wrapper .comic-info {
+  padding: 5rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+main .comic_wrapper .comic-info .info {
+  flex-basis: 300%;
+  padding-right: 1.75rem;
+}
+main .comic_wrapper .comic-info .info .title {
+  color: #003F5E;
+  font-size: 2rem;
+  padding: 0 0 2rem;
+}
+main .comic_wrapper .comic-info .info .price {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: #55BA59;
+  border-bottom: 1px solid #1f1f1f;
+}
+main .comic_wrapper .comic-info .info .price span {
+  opacity: 0.7;
+  padding: 0.8rem 0.5rem;
+}
+main .comic_wrapper .comic-info .info .price span.store {
+  padding-right: 1rem;
+  border-right: 1px solid #1f1f1f;
+  margin-left: auto;
+}
+main .comic_wrapper .comic-info .info .price select {
+  font-weight: bold;
+  font-size: 1rem;
+  padding-left: 0.75rem;
+}
+main .comic_wrapper .comic-info .info .desc {
+  opacity: 0.7;
+  padding: 1.5rem 0;
+  line-height: 1.5;
+}
+main .comic_wrapper .comic-info .adv {
+  flex-basis: 150%;
+  text-align: right;
+}
+main .comic_wrapper .comic-info .adv span {
+  display: block;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+main .comic_wrapper .comic-info .adv img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.detail_wrapper {
+  padding: 1.75rem 0 6.25rem;
+  color: #003F5E;
+  background-color: #F6F6F6;
+  border-top: 1px solid #ccc;
+}
+.detail_wrapper .container {
+  gap: 3rem;
+  display: flex;
+}
+.detail_wrapper .container .cat-detail {
+  flex-basis: 50%;
+}
+.detail_wrapper .cat-title {
+  font-size: 1.5rem;
+  padding: 0 0 1.9rem;
+}
+.detail_wrapper .list {
+  border-top: 1px solid #ccc;
+}
+.detail_wrapper .list .list-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.detail_wrapper .list .list-item .title {
+  flex-basis: 166.6666666667%;
+}
+.detail_wrapper .list .list-item .content {
+  flex-basis: 250%;
+}
+.detail_wrapper .list .list-item .content a {
+  color: #00A9DF;
+}
+
+.cards_wrapper {
+  padding: 2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards_wrapper .card {
+  padding: 0.5rem 0.75rem;
+  flex-basis: 16.6666666667%;
+  position: relative;
+}
+.cards_wrapper .card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cards_wrapper .card .img_wrapper {
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.cards_wrapper .card .img_wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+.cards_wrapper .card .card_series {
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.form_wrapper {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form_wrapper .form-title {
+  flex-basis: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+.form_wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+.form_wrapper form p {
+  padding: 1rem 0;
+}
+.form_wrapper form label {
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.form_wrapper form input,
+.form_wrapper form textarea {
+  width: 500px;
+  min-width: 200px;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  outline: 2px solid transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2f2f2f;
+  background-color: #F6F6F6;
+  transition: 300ms ease-in-out;
+}
+.form_wrapper form input:focus, .form_wrapper form input:hover,
+.form_wrapper form textarea:focus,
+.form_wrapper form textarea:hover {
+  outline: 2px solid #2195f3;
+}
+.form_wrapper form .btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  background-color: #2195f3;
+  transition: 300ms ease-in-out;
+}
+.form_wrapper form .btn:hover {
+  background-color: #0282F9;
+}
