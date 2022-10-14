@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('metaTitle', ' - Comics')
+@section('metaTitle', 'Show - Comics')
 
 @section('content')
     <ul>

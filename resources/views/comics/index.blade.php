@@ -10,6 +10,9 @@
             </a>
         </li>
     </ul>
+    <a href="{{ route('comics.create') }}">
+        Aggiungi Comic
+    </a>
 
     <h1>
         Comics
