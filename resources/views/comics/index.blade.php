@@ -3,17 +3,6 @@
 @section('metaTitle', 'Comics')
 
 @section('content')
-    <ul>
-        <li>
-            <a href="{{ route('home') }}">
-                Home
-            </a>
-        </li>
-    </ul>
-    <a href="{{ route('comics.create') }}">
-        Aggiungi Comic
-    </a>
-
     <h1>
         Comics
     </h1>
@@ -40,7 +29,7 @@
                 {{ $comic['type'] }}
             </span>
             <div>
-                <a href="{{ route('comics.show', $comic['id']) }}">
+                <a href="{{ route('comics.show', $comic->id) }}">
                     Scopri
                 </a>
             </div>

@@ -3,19 +3,6 @@
 @section('metaTitle', 'Aggiungi Comic')
 
 @section('content')
-    <ul>
-        <li>
-            <a href="{{ route('home') }}">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('comics.index') }}">
-                Comics
-            </a>
-        </li>
-    </ul>
-
     <h1>
         Aggiungi Comic
     </h1>
@@ -24,7 +11,7 @@
         @csrf
         <p>
             <label for="title">Titolo</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" required>
         </p>
         <p>
             <label for="series">Serie</label>
@@ -36,8 +23,7 @@
         </p>
         <p>
             <label for="description">Descrizione</label>
-            <textarea name="description" id="description">
-            </textarea>
+            <textarea name="description" id="description"></textarea>
         </p>
         <p>
             <label for="sale_date">Data</label>
@@ -45,7 +31,7 @@
         </p>
         <p>
             <label for="price">Prezzo</label>
-            <input type="number" name="price" id="price">
+            <input type="text" name="price" id="price" required>
         </p>
         <p>
             <label for="type">Tipo</label>
