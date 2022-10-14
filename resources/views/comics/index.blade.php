@@ -14,4 +14,30 @@
     <h1>
         Comics
     </h1>
+
+    <div>
+        @forelse($comics as $comic)
+        <h3>
+            {{ $comic['title'] }}
+        </h3>
+        <h4>
+            {{ $comic['series'] }}
+        </h4>
+        <img src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
+        <p>
+            {{ $comic['description'] }}
+        </p>
+        <span>
+            {{ $comic['price'] }}
+        </span>
+        <span>
+            {{ $comic['sale_date'] }}
+        </span>
+        <span>
+            {{ $comic['type'] }}
+        </span>
+        @empty
+            Nessun Comic trovato
+        @endforelse
+    </div>
 @endsection
