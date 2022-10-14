@@ -20,7 +20,7 @@
         Aggiungi Comic
     </h1>
 
-    <form action="/" method="POST">
+    <form action="{{ route('comics.store') }}" method="POST">
         @csrf
         <p>
             <label for="title">Titolo</label>

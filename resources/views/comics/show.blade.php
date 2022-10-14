@@ -28,12 +28,12 @@
             <h4>
                 {{ $item['series'] }}
             </h4>
-            <img src="{{ $item['thumb'] }}" alt="copertina {{ $item['title'] }}">
+            <img width="300" src="{{ $item['thumb'] }}" alt="copertina {{ $item['title'] }}">
             <p>
                 {{ $item['description'] }}
             </p>
             <span>
-                {{ $item['price'] }}
+                &euro; {{ $item['price'] }}
             </span>
             <span>
                 {{ $item['sale_date'] }}

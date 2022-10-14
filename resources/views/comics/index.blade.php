@@ -26,12 +26,12 @@
             <h4>
                 {{ $comic['series'] }}
             </h4>
-            <img src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
+            <img width="300" src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
             <p>
                 {{ $comic['description'] }}
             </p>
             <span>
-                {{ $comic['price'] }}
+                &euro; {{ $comic['price'] }}
             </span>
             <span>
                 {{ $comic['sale_date'] }}
