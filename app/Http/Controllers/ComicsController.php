@@ -39,28 +39,18 @@ class ComicsController extends Controller
     {
 
         $data = $request->validate([
-            'title'=>'required|max:255',
-            'description'=>'nullable',
-            'thumb'=>'nullable',
-            'price'=>'required|max:10',
-            'series'=>'required|max:255',
-            'sale_date'=>'required',
-            'type'=>'required',
+            'title' => 'required|max:255',
+            'series' => 'required|max:255',
+            'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'required|max:10',
+            'sale_date' => 'required',
+            'type' => 'required|max:255',
         ]);
-        
-        // $c = new Comic();
-        // $c->fill($data);
-        // $c->title = $data['title'];
-        // $c->description = $data['description'];
-        // $c->thumb = $data['thumb'];
-        // $c->price = $data['price'];
-        // $c->series = $data['series'];
-        // $c->sale_date = $data['sale_date'];
-        // $c->type = $data['type'];
-        // $c->save();
-        $c = Comic::create($data);
 
-        return redirect()->route('comics.show', $c->id);
+        $comic = Comic::create($data);
+
+        return redirect()->route('comics.show', compact('comic'));
     }
 
     /**
@@ -119,6 +109,6 @@ class ComicsController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index');   
+        return redirect()->route('comics.index');
     }
 }

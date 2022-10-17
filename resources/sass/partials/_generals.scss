@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+ul,
+menu {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+select{
+    border: 0px solid;
+    color: currentColor;
+    background-color: transparent;
+}
+
+input{
+    color: currentColor;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+// Layout
+
+.container {
+    padding: 0 0.75rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+// Components
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.btn{
+    padding: 0.75rem 0.5rem;
+    border: 2px solid transparent;
+}
