@@ -14,7 +14,7 @@
         <p>
             <label for="title">Titolo</label>
             <input class="@error('title') invalid @enderror" type="text" name="title" id="title"
-                value="{{ $comic['title'], $comic['title'] }}" required>
+                value="{{ old('title', $comic['title']) }}" required>
             @error('title')
                 {{ $message }}
             @enderror
@@ -22,7 +22,7 @@
         <p>
             <label for="series">Serie</label>
             <input class="@error('series') invalid @enderror" type="text" name="series"
-                value="{{ $comic['series'], $comic['series'] }}" id="series">
+                value="{{ old('series', $comic['series']) }}" id="series">
             @error('series')
                 {{ $message }}
             @enderror
@@ -30,7 +30,7 @@
         <p>
             <label for="thumb">Url copertina</label>
             <input class="@error('thumb') invalid @enderror" type="url" name="thumb" id="thumb"
-                value="{{ $comic['thumb'], $comic['thumb'] }}">
+                value="{{ old('thumb', $comic['thumb']) }}">
             @error('thumb')
                 {{ $message }}
             @enderror
@@ -42,7 +42,7 @@
         <p>
             <label for="sale_date">Data</label>
             <input class="@error('sale_date') invalid @enderror" type="date" name="sale_date" id="sale_date"
-                value="{{ $comic['sale_date'], $comic['sale_date'] }}">
+                value="{{ old('sale_date', $comic['sale_date']) }}">
             @error('sale_date')
                 {{ $message }}
             @enderror
@@ -50,7 +50,7 @@
         <p>
             <label for="price">Prezzo</label>
             <input class="@error('price') invalid @enderror" type="text" name="price" id="price"
-                value="{{ $comic['price'], $comic['price'] }}" required>
+                value="{{ old('price', $comic['price']) }}" required>
             @error('price')
                 {{ $message }}
             @enderror
@@ -58,7 +58,7 @@
         <p>
             <label for="type">Tipo</label>
             <input class="@error('type') invalid @enderror" type="text" name="type" id="type"
-                value="{{ $comic['type'], $comic['type'] }}">
+                value="{{ old('type', $comic['type']) }}">
             @error('type')
                 {{ $message }}
             @enderror
