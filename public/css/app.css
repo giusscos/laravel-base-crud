@@ -422,6 +422,11 @@ main .comic_wrapper .comic-info .adv img {
 .form_wrapper form p {
   padding: 1rem 0;
 }
+.form_wrapper form p .error {
+  color: red;
+  display: block;
+  padding: 0.5rem 0;
+}
 .form_wrapper form label {
   display: block;
   cursor: pointer;
@@ -442,6 +447,10 @@ main .comic_wrapper .comic-info .adv img {
   background-color: #F6F6F6;
   transition: 300ms ease-in-out;
 }
+.form_wrapper form input.invalid,
+.form_wrapper form textarea.invalid {
+  border: 2px solid red;
+}
 .form_wrapper form input:focus, .form_wrapper form input:hover,
 .form_wrapper form textarea:focus,
 .form_wrapper form textarea:hover {
@@ -457,4 +466,24 @@ main .comic_wrapper .comic-info .adv img {
 }
 .form_wrapper form .btn:hover {
   background-color: #0282F9;
+}
+.form_wrapper form .btn.destroy {
+  color: white;
+  background-color: red;
+}
+
+.edit_wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+.edit_wrapper form > * {
+  cursor: pointer;
+}
+.edit_wrapper .edit {
+  color: white;
+  background-color: #2195f3;
+}
+.edit_wrapper .destroy {
+  color: white;
+  background-color: red;
 }

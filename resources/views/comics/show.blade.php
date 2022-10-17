@@ -50,6 +50,22 @@
                     <p class="desc">
                         {{ $comic['description'] }}
                     </p>
+                    <div class="edit_wrapper">
+                        <form action="{{ route('comics.edit', $comic) }}" method="get">
+                            @csrf
+                            <button class="btn edit">
+                                Modifica
+                            </button>
+                        </form>
+                        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button class="btn destroy">
+                                Elimina
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="adv">
                     <span class="uppercase">advertisement</span>
