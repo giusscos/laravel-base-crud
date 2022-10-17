@@ -15,7 +15,7 @@
             <h4>
                 {{ $comic['series'] }}
             </h4>
-            <img width="300" src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
+            <img width="200" src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
             <p>
                 {{ $comic['description'] }}
             </p>
@@ -32,6 +32,19 @@
                 <a href="{{ route('comics.show', $comic->id) }}">
                     Scopri
                 </a>
+                <form action="{{ route('comics.edit', $comic) }}" method="get">
+                    @csrf
+                    <button>
+                        Modifica
+                    </button>
+                </form>
+                <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button>
+                        Elimina
+                    </button>
+                </form>
             </div>
         @empty
             Nessun Comic trovato
