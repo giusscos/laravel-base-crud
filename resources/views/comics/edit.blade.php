@@ -13,34 +13,77 @@
 
         <p>
             <label for="title">Titolo</label>
-            <input type="text" name="title" id="title" value="{{$comic['title']}}" required>
+            <input class="@error('title') invalid @enderror" type="text" name="title" id="title"
+                value="{{ $comic['title'], $comic['title'] }}" required>
+            @error('title')
+                {{ $message }}
+            @enderror
         </p>
         <p>
             <label for="series">Serie</label>
-            <input type="text" name="series" value="{{$comic['series']}}" id="series">
+            <input class="@error('series') invalid @enderror" type="text" name="series"
+                value="{{ $comic['series'], $comic['series'] }}" id="series">
+            @error('series')
+                {{ $message }}
+            @enderror
         </p>
         <p>
             <label for="thumb">Url copertina</label>
-            <input type="url" name="thumb" id="thumb" value="{{$comic['thumb']}}">
+            <input class="@error('thumb') invalid @enderror" type="url" name="thumb" id="thumb"
+                value="{{ $comic['thumb'], $comic['thumb'] }}">
+            @error('thumb')
+                {{ $message }}
+            @enderror
         </p>
         <p>
             <label for="description">Descrizione</label>
-            <textarea name="description" id="description">{{$comic['description']}}</textarea>
+            <textarea name="description" id="description">{{ $comic['description'] }}</textarea>
         </p>
         <p>
             <label for="sale_date">Data</label>
-            <input type="date" name="sale_date" id="sale_date" value="{{$comic['sale_date']}}">
+            <input class="@error('sale_date') invalid @enderror" type="date" name="sale_date" id="sale_date"
+                value="{{ $comic['sale_date'], $comic['sale_date'] }}">
+            @error('sale_date')
+                {{ $message }}
+            @enderror
         </p>
         <p>
             <label for="price">Prezzo</label>
-            <input type="text" name="price" id="price" value="{{$comic['price']}}" required>
+            <input class="@error('price') invalid @enderror" type="text" name="price" id="price"
+                value="{{ $comic['price'], $comic['price'] }}" required>
+            @error('price')
+                {{ $message }}
+            @enderror
         </p>
         <p>
             <label for="type">Tipo</label>
-            <input type="text" name="type" id="type" value="{{$comic['type']}}">
+            <input class="@error('type') invalid @enderror" type="text" name="type" id="type"
+                value="{{ $comic['type'], $comic['type'] }}">
+            @error('type')
+                {{ $message }}
+            @enderror
         </p>
         <button type="submit">
             Modifica
         </button>
     </form>
+
+    <form action="{{route('comics.destroy', $comic)}}" method="post">
+        @csrf
+        @method('DELETE')
+        <button>
+            Elimina
+        </button>
+
+    </form>
+
+    <style>
+        .invalid {
+            border: 2px solid red;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
 @endsection
