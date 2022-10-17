@@ -9,7 +9,7 @@
             <h4>
                 {{ $comic['series'] }}
             </h4>
-            <img width="300" src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
+            <img width="200" src="{{ $comic['thumb'] }}" alt="copertina {{ $comic['title'] }}">
             <p>
                 {{ $comic['description'] }}
             </p>
